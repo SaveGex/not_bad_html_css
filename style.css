@@ -1,0 +1,132 @@
+*{
+    color: wheat;
+}
+body{
+    background-color: gray;
+    height: 100%;
+}
+.note > p{
+    color: gray;
+}
+.first-content > .row{
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.cup{
+    display: flex;
+    gap: 25px;
+    border-radius: 25px;
+    background-color: rgb(64, 64, 64);
+    border: 1px wheat solid;
+    align-items: center;
+}
+.cup-text{
+    padding-right: 10px;
+}
+.image{
+    padding-left: 5px;
+}
+
+a{
+    font-size: 25px;
+    color:blanchedalmond;
+    text-decoration:none;
+    border-radius: 40%;
+    filter: drop-shadow(5px -2px 4px white);
+    transition: all .3s;
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    transition: all .3s ease-in-out;
+}
+a::after{
+    content:'';
+    border-radius: 20%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    transform-origin: 0% 0%;
+    background-color: rgba(255, 255, 255, 0);
+    transform: scale(0);
+    transition: all  .2s ease-in-out;
+}
+a:hover{
+    color: black;
+    filter: none;
+}
+a:hover::after{
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    border-radius: 20px;
+    transform: scale(1);
+    background-color: wheat;
+    
+}
+.navigate{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 21px;
+    border: 1px wheat solid;
+}
+.image1> img{
+    border-radius: 20px;
+}
+.content-row{
+    position: relative;   
+    border-radius: 20px;
+    border-top: 2px wheat solid;
+}
+.content-row::after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-color: wheat;
+    border-radius: 20px;
+    height: 2px;
+    width: 100%;
+}
+
+.image > img{
+    
+    border-radius: 50%;
+    width: 50px;
+}
+
+.image1 > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover
+}
+
+.image1{
+    height: 90%;
+    
+}
+.row-text{
+    margin-top: 50px;
+    border-radius: 20px;
+    border: 1px wheat solid;
+}
+.text{
+    padding: 31px 25px 20px 31px;
+}
+@media screen and (max-width: 768px) {
+    .hide-col {
+        display: none;
+    }
+    .nav-div{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .hide-md{
+        display: none;
+    }
+}
